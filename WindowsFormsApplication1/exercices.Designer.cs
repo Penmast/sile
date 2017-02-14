@@ -58,6 +58,7 @@
             this.textBox1.Location = new System.Drawing.Point(442, 98);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(374, 264);
             this.textBox1.TabIndex = 4;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -100,7 +101,7 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Exercices";
             // 
-            // Form3
+            // exercices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +111,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form3";
+            this.Name = "exercices";
             this.Text = "SignLearning";
             this.ResumeLayout(false);
             this.PerformLayout();
