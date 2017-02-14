@@ -52,6 +52,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -66,25 +67,6 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Beginner 1",
-            "Beginner 2",
-            "Beginner 3",
-            "Beginner 4",
-            "Beginner 5",
-            "Beginner 6",
-            "Beginner 7",
-            "Intermediate 1",
-            "Intermediate 2",
-            "Intermediate 3",
-            "Intermediate 4",
-            "Intermediate 5",
-            "Intermediate 6",
-            "Advance 1",
-            "Advance 2",
-            "Advance 3",
-            "Advance 4",
-            "Advance 5"});
             this.listBox1.Location = new System.Drawing.Point(76, 98);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(271, 264);
