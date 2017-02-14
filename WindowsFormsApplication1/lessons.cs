@@ -78,8 +78,15 @@ namespace WindowsFormsApplication1
                 {
                     while (reader.Read())
                     {
-                        string description = (string)reader["description"];
-                        textBox1.Text = description;
+                        try
+                        {
+                            string description = (string)reader["description"];
+                            textBox1.Text = description;
+                        }
+                        catch(InvalidCastException)
+                        {
+                            textBox1.Text = "No description available";
+                        }
                     }
                 }
                 catch (InvalidOperationException ed)
@@ -106,13 +113,15 @@ namespace WindowsFormsApplication1
         {
             this.Close();
             ecranprincipal menuform = new ecranprincipal();
-            this.Hide();
             menuform.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(listBox1.SelectedItem.ToString());
+           
+            this.Close();
+            lessonMenu lessonmenuform = new lessonMenu();
+            lessonmenuform.Show();
         }
     }
 }
