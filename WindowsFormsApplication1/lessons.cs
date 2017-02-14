@@ -13,13 +13,15 @@ namespace WindowsFormsApplication1
 {
     public partial class lessons : Form
     {
+        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projet\sile\WindowsFormsApplication1\sile_db.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(connectionstring);
+        SqlCommand cmd = new SqlCommand();
+        SqlDataReader reader;
+
         public lessons()
         {
             InitializeComponent();
-            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projet\sile\WindowsFormsApplication1\sile_db.mdf;Integrated Security=True");
-            SqlConnection conn = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
+
 
             cmd.CommandText = "select name from lessons;";
             cmd.CommandType = CommandType.Text;
@@ -58,7 +60,41 @@ namespace WindowsFormsApplication1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string sqlcommand = "select description from lessons where name = \'" + listBox1.SelectedItem.ToString() + "\';";
+            cmd.CommandText = sqlcommand;
 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+
+            try
+            {
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        string description = (string)reader["description"];
+                        textBox1.Text = description;
+                    }
+                }
+                catch (InvalidOperationException ed)
+                {
+                    MessageBox.Show(ed.Message);
+                }
+
+
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                conn = null;
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -72,6 +108,11 @@ namespace WindowsFormsApplication1
             ecranprincipal menuform = new ecranprincipal();
             this.Hide();
             menuform.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(listBox1.SelectedItem.ToString());
         }
     }
 }
