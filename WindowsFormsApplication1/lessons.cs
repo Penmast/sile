@@ -18,12 +18,15 @@ namespace WindowsFormsApplication1
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
 
+        List<int> ids;
+
         public lessons()
         {
             InitializeComponent();
 
+            ids = new List<int>();
 
-            cmd.CommandText = "select name from lessons;";
+            cmd.CommandText = "select name, Id from lessons;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
 
@@ -40,6 +43,7 @@ namespace WindowsFormsApplication1
                     while (reader.Read())
                     {
                         string name = (string)reader["name"];
+                        ids.Add((int)reader["Id"]);
                         listBox1.Items.Add(name);
                     }
                 }
@@ -120,7 +124,7 @@ namespace WindowsFormsApplication1
         {
            
             this.Close();
-            lessonMenu lessonmenuform = new lessonMenu();
+            lessonMenu lessonmenuform = new lessonMenu( ids[ listBox1.SelectedIndex ] );
             lessonmenuform.Show();
         }
     }

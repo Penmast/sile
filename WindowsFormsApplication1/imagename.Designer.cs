@@ -53,7 +53,7 @@ namespace WindowsFormsApplication1
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(35, 13);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "label1";
+            this.titleLabel.Text = "";
             // 
             // image
             // 

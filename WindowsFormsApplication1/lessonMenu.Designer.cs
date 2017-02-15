@@ -28,73 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.imagename1 = new WindowsFormsApplication1.imagename();
-            this.imagename2 = new WindowsFormsApplication1.imagename();
-            this.imagename3 = new WindowsFormsApplication1.imagename();
-            this.imagename4 = new WindowsFormsApplication1.imagename();
-            this.imagename5 = new WindowsFormsApplication1.imagename();
-            this.imagename6 = new WindowsFormsApplication1.imagename();
-            this.imagename7 = new WindowsFormsApplication1.imagename();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
+            this.imagename6 = new WindowsFormsApplication1.imagename();
+            this.imagename5 = new WindowsFormsApplication1.imagename();
+            this.imagename4 = new WindowsFormsApplication1.imagename();
+            this.imagename3 = new WindowsFormsApplication1.imagename();
+            this.imagename2 = new WindowsFormsApplication1.imagename();
+            this.imagename1 = new WindowsFormsApplication1.imagename();
             this.SuspendLayout();
-            // 
-            // imagename1
-            // 
-            this.imagename1.Location = new System.Drawing.Point(77, 54);
-            this.imagename1.Name = "imagename1";
-            this.imagename1.Size = new System.Drawing.Size(220, 231);
-            this.imagename1.TabIndex = 0;
-            this.imagename1.title = "label1";
-            // 
-            // imagename2
-            // 
-            this.imagename2.Location = new System.Drawing.Point(367, 54);
-            this.imagename2.Name = "imagename2";
-            this.imagename2.Size = new System.Drawing.Size(220, 231);
-            this.imagename2.TabIndex = 1;
-            this.imagename2.title = "label1";
-            // 
-            // imagename3
-            // 
-            this.imagename3.Location = new System.Drawing.Point(593, 54);
-            this.imagename3.Name = "imagename3";
-            this.imagename3.Size = new System.Drawing.Size(220, 231);
-            this.imagename3.TabIndex = 2;
-            this.imagename3.title = "label1";
-            // 
-            // imagename4
-            // 
-            this.imagename4.Location = new System.Drawing.Point(77, 53);
-            this.imagename4.Name = "imagename4";
-            this.imagename4.Size = new System.Drawing.Size(220, 231);
-            this.imagename4.TabIndex = 3;
-            this.imagename4.title = "label1";
-            // 
-            // imagename5
-            // 
-            this.imagename5.Location = new System.Drawing.Point(77, 291);
-            this.imagename5.Name = "imagename5";
-            this.imagename5.Size = new System.Drawing.Size(220, 231);
-            this.imagename5.TabIndex = 4;
-            this.imagename5.title = "label1";
-            // 
-            // imagename6
-            // 
-            this.imagename6.Location = new System.Drawing.Point(367, 291);
-            this.imagename6.Name = "imagename6";
-            this.imagename6.Size = new System.Drawing.Size(220, 231);
-            this.imagename6.TabIndex = 5;
-            this.imagename6.title = "label1";
-            // 
-            // imagename7
-            // 
-            this.imagename7.Location = new System.Drawing.Point(593, 291);
-            this.imagename7.Name = "imagename7";
-            this.imagename7.Size = new System.Drawing.Size(220, 231);
-            this.imagename7.TabIndex = 6;
-            this.imagename7.title = "label1";
             // 
             // buttonBack
             // 
@@ -114,6 +57,7 @@
             this.buttonPrevious.TabIndex = 8;
             this.buttonPrevious.Text = "Previous";
             this.buttonPrevious.UseVisualStyleBackColor = true;
+            this.buttonPrevious.Click += new System.EventHandler(this.buttonPrevious_Click);
             // 
             // buttonNext
             // 
@@ -123,6 +67,61 @@
             this.buttonNext.TabIndex = 9;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
+            // imagename6
+            // 
+            this.imagename6.Location = new System.Drawing.Point(593, 291);
+            this.imagename6.Name = "imagename6";
+            this.imagename6.pic = null;
+            this.imagename6.Size = new System.Drawing.Size(220, 231);
+            this.imagename6.TabIndex = 6;
+            this.imagename6.title = "";
+            // 
+            // imagename5
+            // 
+            this.imagename5.Location = new System.Drawing.Point(367, 291);
+            this.imagename5.Name = "imagename5";
+            this.imagename5.pic = null;
+            this.imagename5.Size = new System.Drawing.Size(220, 231);
+            this.imagename5.TabIndex = 5;
+            this.imagename5.title = "";
+            // 
+            // imagename4
+            // 
+            this.imagename4.Location = new System.Drawing.Point(77, 291);
+            this.imagename4.Name = "imagename4";
+            this.imagename4.pic = null;
+            this.imagename4.Size = new System.Drawing.Size(220, 231);
+            this.imagename4.TabIndex = 4;
+            this.imagename4.title = "";
+            // 
+            // imagename3
+            // 
+            this.imagename3.Location = new System.Drawing.Point(593, 54);
+            this.imagename3.Name = "imagename3";
+            this.imagename3.pic = null;
+            this.imagename3.Size = new System.Drawing.Size(220, 231);
+            this.imagename3.TabIndex = 2;
+            this.imagename3.title = "";
+            // 
+            // imagename2
+            // 
+            this.imagename2.Location = new System.Drawing.Point(367, 54);
+            this.imagename2.Name = "imagename2";
+            this.imagename2.pic = null;
+            this.imagename2.Size = new System.Drawing.Size(220, 231);
+            this.imagename2.TabIndex = 1;
+            this.imagename2.title = "";
+            // 
+            // imagename1
+            // 
+            this.imagename1.Location = new System.Drawing.Point(77, 54);
+            this.imagename1.Name = "imagename1";
+            this.imagename1.pic = null;
+            this.imagename1.Size = new System.Drawing.Size(220, 231);
+            this.imagename1.TabIndex = 0;
+            this.imagename1.title = "";
             // 
             // lessonMenu
             // 
@@ -132,7 +131,6 @@
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.imagename7);
             this.Controls.Add(this.imagename6);
             this.Controls.Add(this.imagename5);
             this.Controls.Add(this.imagename4);
@@ -153,7 +151,6 @@
         private imagename imagename4;
         private imagename imagename5;
         private imagename imagename6;
-        private imagename imagename7;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonPrevious;
         private System.Windows.Forms.Button buttonNext;
