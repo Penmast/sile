@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
 {
     public partial class lessonMenu : Form
     {
-        private static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projet\sile\WindowsFormsApplication1\sile_db.mdf;Integrated Security=True");
+        private static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
         private SqlConnection conn = new SqlConnection(connectionstring);
         private SqlCommand cmd = new SqlCommand();
         private SqlDataReader reader;
