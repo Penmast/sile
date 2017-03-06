@@ -68,6 +68,12 @@
     <Compile Include="imagename.Designer.cs">
       <DependentUpon>imagename.cs</DependentUpon>
     </Compile>
+    <Compile Include="exerciceMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exerciceMenu.Designer.cs">
+      <DependentUpon>exerciceMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="lessonMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="imagename.resx">
       <DependentUpon>imagename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exerciceMenu.resx">
+      <DependentUpon>exerciceMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lessonMenu.resx">
       <DependentUpon>lessonMenu.cs</DependentUpon>
