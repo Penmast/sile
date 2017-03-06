@@ -51,9 +51,9 @@ namespace WindowsFormsApplication1
             this.titleLabel.AutoSize = true;
             this.titleLabel.Location = new System.Drawing.Point(69, 196);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(35, 13);
+            this.titleLabel.Size = new System.Drawing.Size(0, 13);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "";
+            this.picture.Click += new System.EventHandler(this.onClick);
             // 
             // image
             // 
@@ -69,6 +69,7 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.picture);
             this.Name = "imagename";
             this.Size = new System.Drawing.Size(220, 231);
+
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -77,7 +78,7 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        private System.Windows.Forms.PictureBox picture;
+        public System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.ImageList image;
 

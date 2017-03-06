@@ -77,6 +77,7 @@
             this.imagename6.Size = new System.Drawing.Size(220, 231);
             this.imagename6.TabIndex = 6;
             this.imagename6.title = "";
+            this.imagename6.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // imagename5
             // 
@@ -86,6 +87,7 @@
             this.imagename5.Size = new System.Drawing.Size(220, 231);
             this.imagename5.TabIndex = 5;
             this.imagename5.title = "";
+            this.imagename5.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // imagename4
             // 
@@ -95,6 +97,7 @@
             this.imagename4.Size = new System.Drawing.Size(220, 231);
             this.imagename4.TabIndex = 4;
             this.imagename4.title = "";
+            this.imagename4.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // imagename3
             // 
@@ -104,6 +107,7 @@
             this.imagename3.Size = new System.Drawing.Size(220, 231);
             this.imagename3.TabIndex = 2;
             this.imagename3.title = "";
+            this.imagename3.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // imagename2
             // 
@@ -113,6 +117,7 @@
             this.imagename2.Size = new System.Drawing.Size(220, 231);
             this.imagename2.TabIndex = 1;
             this.imagename2.title = "";
+            this.imagename2.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // imagename1
             // 
@@ -122,6 +127,7 @@
             this.imagename1.Size = new System.Drawing.Size(220, 231);
             this.imagename1.TabIndex = 0;
             this.imagename1.title = "";
+            this.imagename1.clicked += new System.EventHandler(this.imagename_clicked);
             // 
             // lessonMenu
             // 

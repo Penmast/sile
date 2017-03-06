@@ -12,9 +12,16 @@ namespace WindowsFormsApplication1
 {
     public partial class imagename : UserControl
     {
+        public event System.EventHandler clicked;
+
         public imagename()
         {
             InitializeComponent();
+        }
+
+        public void onClick(object sender, EventArgs e)
+        {
+            this.clicked(sender, e);
         }
     }
 }
