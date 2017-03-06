@@ -13,16 +13,24 @@ namespace WindowsFormsApplication1
 {
     public partial class exercices : Form
     {
+
+        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(connectionstring);
+        SqlCommand cmd = new SqlCommand();
+        SqlDataReader reader;
+
+        List<int> ids;
+
         public exercices()
         {
             InitializeComponent();
             
-            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projet\sile\WindowsFormsApplication1\sile_db.mdf;Integrated Security=True");
+            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
             SqlConnection conn = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
 
-            cmd.CommandText = "select name from lessons;";
+            cmd.CommandText = "select name from Exercices;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
           
@@ -59,7 +67,48 @@ namespace WindowsFormsApplication1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string sqlcommand = "select description from Exercices where name = \'" + listBox1.SelectedItem.ToString() + "\';";
+            cmd.CommandText = sqlcommand;
 
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+
+            try
+            {
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        try
+                        {
+                            string description = (string)reader["description"];
+                            textBox1.Text = description;
+                        }
+                        catch (InvalidCastException)
+                        {
+                            textBox1.Text = "No description available";
+                        }
+                    }
+                }
+                catch (InvalidOperationException ed)
+                {
+                    MessageBox.Show(ed.Message);
+                }
+
+
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                conn = null;
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,6 +123,13 @@ namespace WindowsFormsApplication1
             ecranprincipal menuform = new ecranprincipal();
             this.Hide();
             menuform.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            exerciceMenu exercicemenuform = new exerciceMenu(listBox1.SelectedIndex);
+            exercicemenuform.Show();
         }
     }
 }
