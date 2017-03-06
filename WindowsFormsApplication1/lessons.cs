@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class lessons : Form
     {
-        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projet\sile\WindowsFormsApplication1\sile_db.mdf;Integrated Security=True");
+        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
         SqlConnection conn = new SqlConnection(connectionstring);
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;

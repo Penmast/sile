@@ -21,9 +21,11 @@ namespace WindowsFormsApplication1
         private SqlDataReader reader;
 
         private imagename[] imageContainer;
+        private int[] imageId;
         private int counter;
         private int page;
         private int max_page;
+        private int num_of_signs;
 
         private int id;
 
@@ -41,6 +43,7 @@ namespace WindowsFormsApplication1
 
         private void initialize()
         {
+            imageId = new int[6];
             imageContainer = new imagename[6];
             imageContainer[0] = imagename1;
             imageContainer[1] = imagename2;
@@ -50,10 +53,11 @@ namespace WindowsFormsApplication1
             imageContainer[5] = imagename6;
             counter = 0;
             page = 0;
+            num_of_signs = 0;
             max_page = find_max_page();
 
             buttonPrevious.Enabled = false;
-            if ( (page+1) == max_page || max_page == 0) buttonNext.Enabled = false;
+            if ((page + 1) == max_page || max_page == 0) buttonNext.Enabled = false;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -65,7 +69,7 @@ namespace WindowsFormsApplication1
 
         private void clear()
         {
-            for(int i = 0; i < NUM_ON_PAGE; i++)
+            for (int i = 0; i < NUM_ON_PAGE; i++)
             {
                 imageContainer[i].title = "";
                 imageContainer[i].pic = null;
@@ -76,7 +80,7 @@ namespace WindowsFormsApplication1
 
         private void fill_imagename()
         {
-            cmd.CommandText = "select * from signs where Id in ( select idSign from asso_Lessons_Sign where idLessons =" + id + ") order by  id offset " + page*NUM_ON_PAGE + " rows fetch next " + NUM_ON_PAGE + " rows only;";
+            cmd.CommandText = "select * from signs where Id in ( select idSign from asso_Lessons_Sign where idLessons =" + id + ") order by  id offset " + page * NUM_ON_PAGE + " rows fetch next " + NUM_ON_PAGE + " rows only;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
 
@@ -90,10 +94,11 @@ namespace WindowsFormsApplication1
 
                 try
                 {
-                    while (reader.Read() || counter < NUM_ON_PAGE * (page+1))
+                    while (reader.Read() || counter < NUM_ON_PAGE * (page + 1))
                     {
                         string name = (string)reader["name"];
                         imageContainer[counter].title = name;
+                        imageId[counter] = (int)reader["Id"];
 
                         try
                         {
@@ -132,7 +137,7 @@ namespace WindowsFormsApplication1
             fill_imagename();
 
             buttonPrevious.Enabled = true;
-            if ( (page+1) == max_page) buttonNext.Enabled = false;
+            if ((page + 1) == max_page) buttonNext.Enabled = false;
         }
 
         private void buttonPrevious_Click(object sender, EventArgs e)
@@ -158,7 +163,8 @@ namespace WindowsFormsApplication1
 
                 reader.Read();
                 int row_num = (int)reader["num"];
-                
+                num_of_signs = row_num;
+
                 conn.Close();
                 return row_num / NUM_ON_PAGE;
             }
@@ -168,6 +174,17 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(e.Message);
                 return 0;
             }
+        }
+
+        private void imagename_clicked(object sender, EventArgs e)
+        {
+            PictureBox this_picture = (sender as PictureBox);
+            imagename this_in = this_picture.Parent as imagename;
+
+            int id_in = Array.FindIndex(imageContainer, i => i == this_in);
+
+            sign signForm = new sign(imageId[id_in], id_in + page, num_of_signs);
+            signForm.Show();
         }
     }
 }
