@@ -18,12 +18,54 @@ namespace WindowsFormsApplication1
         private SqlConnection conn = new SqlConnection(connectionstring);
         private SqlCommand cmd = new SqlCommand();
         private SqlDataReader reader;
+        private List<int> signs;
+        private int id_in_lesson;
+        private int max_lesson;
 
-        public sign(int id_sign, int id_in_lesson, int max_lesson)
+        public sign(int id_sign, int id_in_lesson, int max_lesson, List<int> signs)
         {
             InitializeComponent();
 
+            this.id_in_lesson = id_in_lesson;
+            this.signs = new List<int>(signs);
+            this.max_lesson = max_lesson;
 
+            try
+            {
+                get_sign(this.signs[id_sign]);
+            }
+            catch ( ArgumentOutOfRangeException e)
+            {
+                MessageBox.Show(id_sign.ToString());
+                MessageBox.Show(e.Message);
+            }
+            progress.Text = id_in_lesson+1 + "/" + (max_lesson);
+
+            check_buttons();
+        }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {
+            id_in_lesson--;
+            get_sign(signs[id_in_lesson]);
+            progress.Text = id_in_lesson+1 + "/" + (max_lesson);
+
+            check_buttons();
+            button_next.Enabled = true;
+        }
+
+        private void button_next_Click(object sender, EventArgs e)
+        {
+            id_in_lesson++;
+            get_sign(signs[id_in_lesson]);
+            progress.Text = id_in_lesson+1 + "/" + (max_lesson);
+
+            check_buttons();
+            button_back.Enabled = true;
+        }
+
+        private void get_sign(int id_sign)
+        {
             /* RETRIEVE FROM DATABAASE */
             cmd.CommandText = "select * from signs where Id = " + id_sign;
             cmd.CommandType = CommandType.Text;
@@ -68,8 +110,15 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(e.Message);
             }
             /*********************/
-
-            progress.Text = id_in_lesson + "/" + max_lesson;
         }
+
+
+        private void check_buttons()
+        {
+            if (id_in_lesson == 0) button_back.Enabled = false;
+            if (id_in_lesson+1 == max_lesson) button_next.Enabled = false;
+        }
+
+      
     }
 }

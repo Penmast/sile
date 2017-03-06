@@ -27,6 +27,8 @@ namespace WindowsFormsApplication1
         private int max_page;
         private int num_of_signs;
 
+        private List<int> signs;
+
         private int id;
 
         public const int NUM_ON_PAGE = 6;
@@ -55,9 +57,12 @@ namespace WindowsFormsApplication1
             page = 0;
             num_of_signs = 0;
             max_page = find_max_page();
-
             buttonPrevious.Enabled = false;
             if ((page + 1) == max_page || max_page == 0) buttonNext.Enabled = false;
+
+            signs = new List<int>();
+            fill_signs_list();
+
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -176,6 +181,50 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void fill_signs_list()
+        {
+            cmd.CommandText = "select * from signs where Id in ( select idSign from asso_Lessons_Sign where idLessons =" + id + ");";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+            try
+            {
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+
+                try
+                {
+                    while (reader.Read() )
+                    {
+                        int id_sign = (int)reader["Id"];
+
+                        try
+                        {
+                            signs.Add(id_sign);
+                        }
+                        catch ( NullReferenceException NRE_e)
+                        {
+                            MessageBox.Show(NRE_e.Message);
+                        }
+                    }
+                }
+                catch (InvalidOperationException ed)
+                {
+                    MessageBox.Show(ed.Message);
+                }
+
+
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                conn = null;
+                MessageBox.Show(e.Message);
+            }
+        }
+
         private void imagename_clicked(object sender, EventArgs e)
         {
             PictureBox this_picture = (sender as PictureBox);
@@ -183,8 +232,11 @@ namespace WindowsFormsApplication1
 
             int id_in = Array.FindIndex(imageContainer, i => i == this_in);
 
-            sign signForm = new sign(imageId[id_in], id_in + page, num_of_signs);
-            signForm.Show();
+            if (this_in.title != "" && this_picture != null)
+            {
+                sign signForm = new sign(id_in, id_in + page, num_of_signs, signs);
+                signForm.Show();
+            }
         }
     }
 }

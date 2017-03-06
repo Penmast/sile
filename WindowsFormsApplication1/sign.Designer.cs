@@ -68,21 +68,23 @@
             // 
             // button_next
             // 
-            this.button_next.Location = new System.Drawing.Point(565, 409);
+            this.button_next.Location = new System.Drawing.Point(754, 409);
             this.button_next.Name = "button_next";
             this.button_next.Size = new System.Drawing.Size(75, 23);
             this.button_next.TabIndex = 4;
-            this.button_next.Text = "Back";
+            this.button_next.Text = "Next";
             this.button_next.UseVisualStyleBackColor = true;
+            this.button_next.Click += new System.EventHandler(this.button_next_Click);
             // 
             // button_back
             // 
-            this.button_back.Location = new System.Drawing.Point(763, 409);
+            this.button_back.Location = new System.Drawing.Point(578, 409);
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(75, 23);
             this.button_back.TabIndex = 3;
-            this.button_back.Text = "Suivant";
+            this.button_back.Text = "Back";
             this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // progress
             // 
