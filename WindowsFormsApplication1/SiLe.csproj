@@ -178,6 +178,43 @@
   <ItemGroup>
     <None Include="Resources\signA.png" />
     <None Include="Resources\signB.bmp" />
+    <None Include="Resources\A.jpg" />
+    <None Include="Resources\B.jpg" />
+    <None Include="Resources\C.jpg" />
+    <None Include="Resources\D.jpg" />
+    <None Include="Resources\E.jpg" />
+    <None Include="Resources\F.jpg" />
+    <None Include="Resources\G.jpg" />
+    <None Include="Resources\H.jpg" />
+    <None Include="Resources\I.jpg" />
+    <None Include="Resources\J.jpg" />
+    <None Include="Resources\K.jpg" />
+    <None Include="Resources\L.jpg" />
+    <None Include="Resources\M.jpg" />
+    <None Include="Resources\N.jpg" />
+    <None Include="Resources\O.jpg" />
+    <None Include="Resources\P.jpg" />
+    <None Include="Resources\Q.jpg" />
+    <None Include="Resources\R.jpg" />
+    <None Include="Resources\S.jpg" />
+    <None Include="Resources\T.jpg" />
+    <None Include="Resources\U.jpg" />
+    <None Include="Resources\V.jpg" />
+    <None Include="Resources\W.jpg" />
+    <None Include="Resources\X.jpg" />
+    <None Include="Resources\Y.jpg" />
+    <None Include="Resources\Z.jpg" />
+    <None Include="Resources\Au revoir.jpg" />
+    <None Include="Resources\aujourd%27hui.jpg" />
+    <None Include="Resources\bonjour.jpg" />
+    <None Include="Resources\Ca va.jpg" />
+    <None Include="Resources\demain.jpg" />
+    <None Include="Resources\français.jpg" />
+    <None Include="Resources\Hier.jpg" />
+    <None Include="Resources\Merci.jpg" />
+    <None Include="Resources\non.jpg" />
+    <None Include="Resources\Oui.jpg" />
+    <None Include="Resources\SVP.jpg" />
     <Content Include="sile_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
