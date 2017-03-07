@@ -16,31 +16,22 @@ namespace WindowsFormsApplication1
     {
         private List<sign> signs;
         private int current_sign;
+        private float score;
 
         public exerciceMemory(int id)
         {
             InitializeComponent();
-            buttonEasy.Hide();
-            buttonHard.Hide();
-            buttonMedium.Hide();
-            buttonNext.Hide();
-            textAsk.Hide();
-            textScore.Hide();
-
-            // signs 
+            
             current_sign = 0;
             get_signs(id);
+
+            textScore.Hide();
             fill_page_new(current_sign);
         }
 
-        private void exerciceMemory_Load(object sender, EventArgs e)
+        private void buttonEnd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
 
         struct sign
@@ -87,7 +78,7 @@ namespace WindowsFormsApplication1
                         }
                         catch (InvalidCastException ice)
                         {
-                            MessageBox.Show(ice.Message);
+                            //MessageBox.Show(ice.Message);
                             new_sign.image = null;
                         }
 
@@ -112,8 +103,17 @@ namespace WindowsFormsApplication1
         /* takes a sign id as argument, */
         private void fill_page_new(int id_sign)
         {
+            buttonEasy.Hide();
+            buttonHard.Hide();
+            buttonMedium.Hide();
+            buttonNotFound.Hide();
+            buttonEnd.Hide();
+            textAsk.Hide();
+
             textTitle.Text = signs[id_sign].name;
             imageSign.Image = null;
+
+            textProgress.Text = (current_sign+1) + "/" + signs.Count();
         }
 
         private void buttonShow_Click(object sender, EventArgs e)
@@ -121,10 +121,54 @@ namespace WindowsFormsApplication1
             buttonEasy.Show();
             buttonHard.Show();
             buttonMedium.Show();
-            buttonNext.Show();
+            buttonNotFound.Show();
             textAsk.Show();
 
+            if (current_sign + 1 == signs.Count())
+            {
+                buttonEnd.Text = "End";
+            }
+
             imageSign.Image = signs[current_sign].image;
+        }
+
+        private void add_to_score(object sender, EventArgs e)
+        {
+            Button button_pressed = sender as Button;
+
+            switch ( button_pressed.Name )
+            {
+                case "buttonEasy":
+                    score += 3;
+                    break;
+
+                case "buttonMedium":
+                    score += 2;
+                    break;
+
+                case "buttonHard":
+                    score += 1;
+                    break;
+
+                case "buttonNotFound":
+                    score += 0;
+                    break;
+            }
+
+            if (current_sign + 1 == signs.Count())
+            {
+                score = score / (signs.Count() * 3);
+                textScore.Text = Math.Round((score*100)).ToString() + "%";
+                textScore.Show();
+                buttonEnd.Show();
+            }
+
+            else
+            {
+                current_sign++;
+                fill_page_new(current_sign);
+                textProgress.Text = current_sign + 1 + "/" + signs.Count();
+            }
         }
     }
 }

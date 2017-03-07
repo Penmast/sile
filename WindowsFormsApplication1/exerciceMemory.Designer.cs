@@ -34,9 +34,11 @@
             this.buttonEasy = new System.Windows.Forms.Button();
             this.buttonMedium = new System.Windows.Forms.Button();
             this.buttonHard = new System.Windows.Forms.Button();
-            this.textScore = new System.Windows.Forms.Label();
-            this.buttonNext = new System.Windows.Forms.Button();
+            this.textProgress = new System.Windows.Forms.Label();
+            this.buttonEnd = new System.Windows.Forms.Button();
             this.textAsk = new System.Windows.Forms.Label();
+            this.textScore = new System.Windows.Forms.Label();
+            this.buttonNotFound = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imageSign)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,48 +75,51 @@
             // buttonEasy
             // 
             this.buttonEasy.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonEasy.Location = new System.Drawing.Point(544, 235);
+            this.buttonEasy.Location = new System.Drawing.Point(544, 219);
             this.buttonEasy.Name = "buttonEasy";
-            this.buttonEasy.Size = new System.Drawing.Size(168, 41);
+            this.buttonEasy.Size = new System.Drawing.Size(168, 52);
             this.buttonEasy.TabIndex = 3;
             this.buttonEasy.Text = "Easy";
             this.buttonEasy.UseVisualStyleBackColor = true;
+            this.buttonEasy.Click += new System.EventHandler(this.add_to_score);
             // 
             // buttonMedium
             // 
-            this.buttonMedium.Location = new System.Drawing.Point(544, 318);
+            this.buttonMedium.Location = new System.Drawing.Point(544, 277);
             this.buttonMedium.Name = "buttonMedium";
             this.buttonMedium.Size = new System.Drawing.Size(168, 49);
             this.buttonMedium.TabIndex = 4;
             this.buttonMedium.Text = "Medium";
             this.buttonMedium.UseVisualStyleBackColor = true;
+            this.buttonMedium.Click += new System.EventHandler(this.add_to_score);
             // 
             // buttonHard
             // 
-            this.buttonHard.Location = new System.Drawing.Point(547, 398);
+            this.buttonHard.Location = new System.Drawing.Point(544, 332);
             this.buttonHard.Name = "buttonHard";
             this.buttonHard.Size = new System.Drawing.Size(168, 47);
             this.buttonHard.TabIndex = 5;
             this.buttonHard.Text = "Hard";
             this.buttonHard.UseVisualStyleBackColor = true;
+            this.buttonHard.Click += new System.EventHandler(this.add_to_score);
             // 
-            // textScore
+            // textProgress
             // 
-            this.textScore.Location = new System.Drawing.Point(547, 493);
-            this.textScore.Name = "textScore";
-            this.textScore.Size = new System.Drawing.Size(168, 45);
-            this.textScore.TabIndex = 6;
-            this.textScore.Text = "label2";
+            this.textProgress.Location = new System.Drawing.Point(547, 71);
+            this.textProgress.Name = "textProgress";
+            this.textProgress.Size = new System.Drawing.Size(168, 45);
+            this.textProgress.TabIndex = 6;
+            this.textProgress.Text = "label2";
             // 
-            // buttonNext
+            // buttonEnd
             // 
-            this.buttonNext.Location = new System.Drawing.Point(547, 554);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(167, 63);
-            this.buttonNext.TabIndex = 7;
-            this.buttonNext.Text = "Next";
-            this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            this.buttonEnd.Location = new System.Drawing.Point(547, 554);
+            this.buttonEnd.Name = "buttonEnd";
+            this.buttonEnd.Size = new System.Drawing.Size(167, 63);
+            this.buttonEnd.TabIndex = 7;
+            this.buttonEnd.Text = "End";
+            this.buttonEnd.UseVisualStyleBackColor = true;
+            this.buttonEnd.Click += new System.EventHandler(this.buttonEnd_Click);
             // 
             // textAsk
             // 
@@ -125,14 +130,36 @@
             this.textAsk.TabIndex = 8;
             this.textAsk.Text = "Did you find it...";
             // 
+            // textScore
+            // 
+            this.textScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textScore.Location = new System.Drawing.Point(544, 474);
+            this.textScore.Name = "textScore";
+            this.textScore.Size = new System.Drawing.Size(171, 64);
+            this.textScore.TabIndex = 9;
+            this.textScore.Text = "score";
+            this.textScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonNotFound
+            // 
+            this.buttonNotFound.Location = new System.Drawing.Point(544, 385);
+            this.buttonNotFound.Name = "buttonNotFound";
+            this.buttonNotFound.Size = new System.Drawing.Size(168, 45);
+            this.buttonNotFound.TabIndex = 10;
+            this.buttonNotFound.Text = "Not Found";
+            this.buttonNotFound.UseVisualStyleBackColor = true;
+            this.buttonNotFound.Click += new System.EventHandler(this.add_to_score);
+            // 
             // exerciceMemory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 643);
-            this.Controls.Add(this.textAsk);
-            this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.buttonNotFound);
             this.Controls.Add(this.textScore);
+            this.Controls.Add(this.textAsk);
+            this.Controls.Add(this.buttonEnd);
+            this.Controls.Add(this.textProgress);
             this.Controls.Add(this.buttonHard);
             this.Controls.Add(this.buttonMedium);
             this.Controls.Add(this.buttonEasy);
@@ -140,8 +167,7 @@
             this.Controls.Add(this.textTitle);
             this.Controls.Add(this.imageSign);
             this.Name = "exerciceMemory";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.exerciceMemory_Load);
+            this.Text = "Memory exercice";
             ((System.ComponentModel.ISupportInitialize)(this.imageSign)).EndInit();
             this.ResumeLayout(false);
 
@@ -155,8 +181,10 @@
         private System.Windows.Forms.Button buttonEasy;
         private System.Windows.Forms.Button buttonMedium;
         private System.Windows.Forms.Button buttonHard;
-        private System.Windows.Forms.Label textScore;
-        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Label textProgress;
+        private System.Windows.Forms.Button buttonEnd;
         private System.Windows.Forms.Label textAsk;
+        private System.Windows.Forms.Label textScore;
+        private System.Windows.Forms.Button buttonNotFound;
     }
 }
