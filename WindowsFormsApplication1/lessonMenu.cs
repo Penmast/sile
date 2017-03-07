@@ -171,7 +171,7 @@ namespace WindowsFormsApplication1
                 num_of_signs = row_num;
 
                 conn.Close();
-                return row_num / NUM_ON_PAGE;
+                return (row_num / NUM_ON_PAGE)+1;
             }
             catch (SqlException e)
             {
