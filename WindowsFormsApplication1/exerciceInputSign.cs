@@ -131,8 +131,8 @@ namespace WindowsFormsApplication1
             if (current_sign + 1 == signs.Count())
             {
                 textScore.Text = correct_answers + "/" + signs.Count();
-                double score = (correct_answers / signs.Count()) * 100;
-                textFinalScore.Text = Math.Round( score ).ToString();
+                float score = ( (float)correct_answers / (float)signs.Count()) * 100;
+                textFinalScore.Text = Math.Round(score).ToString() + "%";
                 textFinalScore.Show();
             }
         }
