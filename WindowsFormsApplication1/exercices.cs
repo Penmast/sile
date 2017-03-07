@@ -19,18 +19,14 @@ namespace WindowsFormsApplication1
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
 
-        List<int> ids;
+        List<int> idsLesson;
 
         public exercices()
         {
             InitializeComponent();
-            
-            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
-            SqlConnection conn = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
+            idsLesson = new List<int>();
 
-            cmd.CommandText = "select name from Exercices;";
+            cmd.CommandText = "select name, Id from Exercices;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
           
@@ -47,7 +43,7 @@ namespace WindowsFormsApplication1
                     while (reader.Read())
                     {
                         string name = (string)reader["name"];
-                        listBox1.Items.Add(name);
+                        listExercices.Items.Add(name);
                     }
                 }
                 catch (InvalidOperationException ed)
@@ -63,13 +59,8 @@ namespace WindowsFormsApplication1
                 conn = null;
                 MessageBox.Show(e.Message);
             }
-        }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string sqlcommand = "select description from Exercices where name = \'" + listBox1.SelectedItem.ToString() + "\';";
-            cmd.CommandText = sqlcommand;
-
+            cmd.CommandText = "select name, Id from lessons;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
 
@@ -85,15 +76,10 @@ namespace WindowsFormsApplication1
                 {
                     while (reader.Read())
                     {
-                        try
-                        {
-                            string description = (string)reader["description"];
-                            textBox1.Text = description;
-                        }
-                        catch (InvalidCastException)
-                        {
-                            textBox1.Text = "No description available";
-                        }
+                        string name = (string)reader["name"];
+                        int id = (int)reader["Id"];
+                        idsLesson.Add(id);
+                        listLessons.Items.Add(name);
                     }
                 }
                 catch (InvalidOperationException ed)
@@ -104,20 +90,16 @@ namespace WindowsFormsApplication1
 
                 conn.Close();
             }
-            catch (SqlException err)
+            catch (SqlException e)
             {
                 conn = null;
-                MessageBox.Show(err.Message);
+                MessageBox.Show(e.Message);
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
+        
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
             ecranprincipal menuform = new ecranprincipal();
@@ -125,11 +107,19 @@ namespace WindowsFormsApplication1
             menuform.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonOk_Click(object sender, EventArgs e)
         {
-            this.Close();
-            exerciceMenu exercicemenuform = new exerciceMenu(listBox1.SelectedIndex);
-            exercicemenuform.Show();
+
+            switch ( listExercices.SelectedIndex )
+            {
+                case 0:
+                    break;
+
+                case 1:
+                    exerciceMemory exerciceMemoryForm = new exerciceMemory(idsLesson[ listLessons.SelectedIndex ]);
+                    exerciceMemoryForm.Show();
+                    break;
+            }
         }
     }
 }

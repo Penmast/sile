@@ -28,51 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.descriptionBox = new System.Windows.Forms.TextBox();
+            this.listLessons = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.listExercices = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonOk
             // 
-            this.button1.Location = new System.Drawing.Point(620, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonOk.Location = new System.Drawing.Point(620, 411);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.TabIndex = 0;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
-            // button2
+            // buttonBack
             // 
-            this.button2.Location = new System.Drawing.Point(726, 411);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonBack.Location = new System.Drawing.Point(726, 411);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 1;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // textBox1
+            // descriptionBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(442, 98);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(374, 264);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.descriptionBox.Location = new System.Drawing.Point(442, 98);
+            this.descriptionBox.Multiline = true;
+            this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.ReadOnly = true;
+            this.descriptionBox.Size = new System.Drawing.Size(374, 264);
+            this.descriptionBox.TabIndex = 4;
             // 
-            // listBox1
+            // listLessons
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(76, 98);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(271, 264);
-            this.listBox1.TabIndex = 3;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listLessons.FormattingEnabled = true;
+            this.listLessons.Location = new System.Drawing.Point(76, 98);
+            this.listLessons.Name = "listLessons";
+            this.listLessons.Size = new System.Drawing.Size(130, 264);
+            this.listLessons.TabIndex = 3;
             // 
             // label1
             // 
@@ -84,16 +83,25 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Exercices";
             // 
+            // listExercices
+            // 
+            this.listExercices.FormattingEnabled = true;
+            this.listExercices.Location = new System.Drawing.Point(232, 98);
+            this.listExercices.Name = "listExercices";
+            this.listExercices.Size = new System.Drawing.Size(184, 264);
+            this.listExercices.TabIndex = 6;
+            // 
             // exercices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 460);
+            this.Controls.Add(this.listExercices);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.descriptionBox);
+            this.Controls.Add(this.listLessons);
+            this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.buttonOk);
             this.Name = "exercices";
             this.Text = "SignLearning";
             this.ResumeLayout(false);
@@ -103,10 +111,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.TextBox descriptionBox;
+        private System.Windows.Forms.ListBox listLessons;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listExercices;
     }
 }

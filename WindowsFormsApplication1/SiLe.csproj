@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exerciceMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exerciceMemory.Designer.cs">
+      <DependentUpon>exerciceMemory.cs</DependentUpon>
+    </Compile>
     <Compile Include="imagename.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sile_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="exerciceMemory.resx">
+      <DependentUpon>exerciceMemory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="imagename.resx">
       <DependentUpon>imagename.cs</DependentUpon>
     </EmbeddedResource>
