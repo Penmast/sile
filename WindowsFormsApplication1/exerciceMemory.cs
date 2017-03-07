@@ -109,6 +109,7 @@ namespace WindowsFormsApplication1
             buttonNotFound.Hide();
             buttonEnd.Hide();
             textAsk.Hide();
+            buttonShow.Show();
 
             textTitle.Text = signs[id_sign].name;
             imageSign.Image = null;
@@ -123,6 +124,7 @@ namespace WindowsFormsApplication1
             buttonMedium.Show();
             buttonNotFound.Show();
             textAsk.Show();
+            buttonShow.Hide();
 
             if (current_sign + 1 == signs.Count())
             {
