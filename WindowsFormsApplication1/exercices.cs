@@ -119,6 +119,11 @@ namespace WindowsFormsApplication1
                     exerciceMemory exerciceMemoryForm = new exerciceMemory(idsLesson[ listLessons.SelectedIndex ]);
                     exerciceMemoryForm.Show();
                     break;
+
+                case 2:
+                    exerciceInputSign exerciceInputSignForm = new exerciceInputSign(idsLesson[listLessons.SelectedIndex]);
+                    exerciceInputSignForm.Show();
+                    break;
             }
         }
     }

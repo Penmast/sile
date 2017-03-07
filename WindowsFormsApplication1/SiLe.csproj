@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exerciceInputSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exerciceInputSign.Designer.cs">
+      <DependentUpon>exerciceInputSign.cs</DependentUpon>
+    </Compile>
     <Compile Include="exerciceMemory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sile_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="exerciceInputSign.resx">
+      <DependentUpon>exerciceInputSign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="exerciceMemory.resx">
       <DependentUpon>exerciceMemory.cs</DependentUpon>
     </EmbeddedResource>
