@@ -133,6 +133,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cinq {
+            get {
+                object obj = ResourceManager.GetObject("Cinq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap D {
             get {
                 object obj = ResourceManager.GetObject("D", resourceCulture);
@@ -146,6 +156,26 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap demain {
             get {
                 object obj = ResourceManager.GetObject("demain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Deux {
+            get {
+                object obj = ResourceManager.GetObject("Deux", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dix {
+            get {
+                object obj = ResourceManager.GetObject("Dix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +236,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Hier {
             get {
                 object obj = ResourceManager.GetObject("Hier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Huit {
+            get {
+                object obj = ResourceManager.GetObject("Huit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +323,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Neuf {
+            get {
+                object obj = ResourceManager.GetObject("Neuf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap non {
             get {
                 object obj = ResourceManager.GetObject("non", resourceCulture);
@@ -333,6 +383,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Quatre {
+            get {
+                object obj = ResourceManager.GetObject("Quatre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap R {
             get {
                 object obj = ResourceManager.GetObject("R", resourceCulture);
@@ -351,11 +411,31 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sept {
+            get {
+                object obj = ResourceManager.GetObject("Sept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à .
         /// </summary>
         internal static string signA {
             get {
                 return ResourceManager.GetString("signA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Six {
+            get {
+                object obj = ResourceManager.GetObject("Six", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -382,9 +462,29 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Trois {
+            get {
+                object obj = ResourceManager.GetObject("Trois", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap U {
             get {
                 object obj = ResourceManager.GetObject("U", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Un {
+            get {
+                object obj = ResourceManager.GetObject("Un", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -435,6 +535,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Z {
             get {
                 object obj = ResourceManager.GetObject("Z", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zéro {
+            get {
+                object obj = ResourceManager.GetObject("Zéro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
