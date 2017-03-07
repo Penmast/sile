@@ -27,6 +27,17 @@ namespace WindowsFormsApplication1
 
             get_signs(id);
 
+            /* shuffle signs */
+            Random rnd = new Random();
+            for (int i = signs.Count(); i > 1; i--)
+            {
+                int pos = rnd.Next(i);
+                var x = signs[i - 1];
+                signs[i - 1] = signs[pos];
+                signs[pos] = x;
+            }
+            /* */
+
             textFinalScore.Hide();
 
             fill_new_sign(current_sign);

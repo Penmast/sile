@@ -132,9 +132,9 @@
             // textFinalScore
             // 
             this.textFinalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textFinalScore.Location = new System.Drawing.Point(575, 467);
+            this.textFinalScore.Location = new System.Drawing.Point(546, 467);
             this.textFinalScore.Name = "textFinalScore";
-            this.textFinalScore.Size = new System.Drawing.Size(146, 63);
+            this.textFinalScore.Size = new System.Drawing.Size(198, 63);
             this.textFinalScore.TabIndex = 9;
             this.textFinalScore.Text = "x%";
             this.textFinalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

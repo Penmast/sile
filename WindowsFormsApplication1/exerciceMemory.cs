@@ -25,6 +25,17 @@ namespace WindowsFormsApplication1
             current_sign = 0;
             get_signs(id);
 
+            /* shuffle signs */
+            Random rnd = new Random();
+            for (int i = signs.Count(); i > 1; i--)
+            {
+                int pos = rnd.Next(i);
+                var x = signs[i - 1];
+                signs[i - 1] = signs[pos];
+                signs[pos] = x;
+            }
+            /* */
+
             textScore.Hide();
             fill_page_new(current_sign);
         }
@@ -172,5 +183,7 @@ namespace WindowsFormsApplication1
                 textProgress.Text = current_sign + 1 + "/" + signs.Count();
             }
         }
+
+       
     }
 }
