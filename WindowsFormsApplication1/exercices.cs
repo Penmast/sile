@@ -20,16 +20,17 @@ namespace WindowsFormsApplication1
         SqlDataReader reader;
 
         List<int> idsLesson;
+        List<int> idsExercice;
 
         public exercices()
         {
             InitializeComponent();
             idsLesson = new List<int>();
+            idsExercice = new List<int>();
 
             cmd.CommandText = "select name, Id from Exercices;";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
-          
 
             try
             {
@@ -44,6 +45,7 @@ namespace WindowsFormsApplication1
                     {
                         string name = (string)reader["name"];
                         listExercices.Items.Add(name);
+                        idsExercice.Add((int)reader["Id"]);
                     }
                 }
                 catch (InvalidOperationException ed)
@@ -95,7 +97,7 @@ namespace WindowsFormsApplication1
                 conn = null;
                 MessageBox.Show(e.Message);
             }
-        }
+                    }
 
         
 
@@ -142,6 +144,110 @@ namespace WindowsFormsApplication1
                     exerciceMultipleChoicesForm3.Show();
                     break;
             }
+        }
+
+        private void listExercices_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listLessons.SelectedIndex != -1) show_description();
+        }
+
+        private void listLessons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listExercices.SelectedIndex != -1) show_description();
+        }
+
+
+        private void show_description()
+        {
+            string descriptionText = "";
+
+            string sqlcommand = "select description from Exercices where name = \'" + listExercices.SelectedItem.ToString() + "\';";
+            cmd.CommandText = sqlcommand;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+
+            try
+            {
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        try
+                        {
+                            string description = (string)reader["description"];
+                            descriptionText = description;
+                        }
+                        catch (InvalidCastException)
+                        {
+                            descriptionText = "No description available";
+                        }
+                    }
+                }
+                catch (InvalidOperationException ed)
+                {
+                    MessageBox.Show(ed.Message);
+                }
+
+
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                conn = null;
+                MessageBox.Show(err.Message);
+            }
+
+            sqlcommand = "select Mark from Progress where IdLesson = " + idsLesson[listLessons.SelectedIndex] + " and IdExercice = " + idsExercice[listExercices.SelectedIndex];
+            cmd.CommandText = sqlcommand;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+
+            try
+            {
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+
+                try
+                {
+                    while (reader.Read())
+                    {
+                        try
+                        {
+                            int mark = reader["Mark"] as int? ?? default(int);
+                            descriptionText += Environment.NewLine + Environment.NewLine + mark + "/100";
+                        }
+                        catch (InvalidCastException)
+                        {
+                            descriptionText += "No mark available";
+                        }
+                    }
+                }
+                catch (InvalidOperationException ed)
+                {
+                    MessageBox.Show(ed.Message);
+                }
+
+
+                conn.Close();
+            }
+            catch (SqlException err)
+            {
+                conn = null;
+                MessageBox.Show(err.Message);
+            }
+
+            descriptionBox.Text = descriptionText;
         }
     }
 }

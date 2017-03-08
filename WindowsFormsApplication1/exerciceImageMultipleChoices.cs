@@ -34,6 +34,8 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             get_signs(id);
 
+            this.id = id;
+
             this.difficulty = difficulty;
             current_sign = 0;
 
@@ -210,19 +212,20 @@ namespace WindowsFormsApplication1
 
             else
             {
+                report_score();
                 this.Close();
             }
 
         }
 
-        private void report_score(int id)
+        private void report_score()
         {
             cmd.CommandType = CommandType.Text;
 
             int idex = 5 + difficulty;
 
             cmd.CommandText = "UPDATE Progress SET [Mark] = @Mark WHERE [IdExercice] = @IdExercice AND [IdLesson] = @IdLesson";
-            cmd.Parameters.AddWithValue("@Mark", Math.Round(score * 100));
+            cmd.Parameters.AddWithValue("@Mark", Math.Round((score/signs.Count()) * 100));
             cmd.Parameters.AddWithValue("@IdLesson", id);
             cmd.Parameters.AddWithValue("@IdExercice", idex);
 

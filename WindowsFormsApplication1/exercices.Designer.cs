@@ -72,6 +72,7 @@
             this.listLessons.Name = "listLessons";
             this.listLessons.Size = new System.Drawing.Size(130, 264);
             this.listLessons.TabIndex = 3;
+            this.listLessons.SelectedIndexChanged += new System.EventHandler(this.listLessons_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -90,6 +91,7 @@
             this.listExercices.Name = "listExercices";
             this.listExercices.Size = new System.Drawing.Size(184, 264);
             this.listExercices.TabIndex = 6;
+            this.listExercices.SelectedIndexChanged += new System.EventHandler(this.listExercices_SelectedIndexChanged);
             // 
             // exercices
             // 
