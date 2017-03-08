@@ -74,6 +74,12 @@
     <Compile Include="exerciceMemory.Designer.cs">
       <DependentUpon>exerciceMemory.cs</DependentUpon>
     </Compile>
+    <Compile Include="exercice_mcq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exercice_mcq.Designer.cs">
+      <DependentUpon>exercice_mcq.cs</DependentUpon>
+    </Compile>
     <Compile Include="imagename.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="exerciceMemory.resx">
       <DependentUpon>exerciceMemory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exercice_mcq.resx">
+      <DependentUpon>exercice_mcq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="imagename.resx">
       <DependentUpon>imagename.cs</DependentUpon>

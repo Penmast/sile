@@ -113,6 +113,8 @@ namespace WindowsFormsApplication1
             switch ( listExercices.SelectedIndex )
             {
                 case 0:
+                    exercice_mcq exercice_mcqForm = new exercice_mcq(idsLesson[listLessons.SelectedIndex]);
+                    exercice_mcqForm.Show();
                     break;
 
                 case 1:
