@@ -126,6 +126,11 @@ namespace WindowsFormsApplication1
                     exerciceInputSign exerciceInputSignForm = new exerciceInputSign(idsLesson[listLessons.SelectedIndex]);
                     exerciceInputSignForm.Show();
                     break;
+
+                case 3:
+                    exerciceImageMultipleChoices exerciceMultipleChoicesForm = new exerciceImageMultipleChoices(idsLesson[listLessons.SelectedIndex]);
+                    exerciceMultipleChoicesForm.Show();
+                    break;
             }
         }
     }
