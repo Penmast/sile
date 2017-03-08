@@ -236,10 +236,10 @@
     <None Include="Resources\Dix.jpg" />
     <None Include="Resources\Deux.jpg" />
     <Content Include="sile_db.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sile_db_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>sile_db.mdf</DependentUpon>
     </Content>
   </ItemGroup>

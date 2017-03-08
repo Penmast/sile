@@ -12,11 +12,17 @@ using WindowsFormsApplication1.Properties;
 
 namespace WindowsFormsApplication1
 {
+
     public partial class exerciceInputSign : Form
     {
+        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(connectionstring);
+        SqlCommand cmd = new SqlCommand();
+
         private List<sign> signs;
         private int correct_answers;
         private int current_sign;
+        private int id;
 
         public exerciceInputSign(int id)
         {
@@ -39,6 +45,7 @@ namespace WindowsFormsApplication1
             /* */
 
             textFinalScore.Hide();
+            this.id = id;
 
             fill_new_sign(current_sign);
         }
@@ -52,9 +59,6 @@ namespace WindowsFormsApplication1
 
         private void get_signs(int id)
         {
-            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
-            SqlConnection conn = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
 
 
@@ -121,9 +125,9 @@ namespace WindowsFormsApplication1
             textScore.Text = correct_answers + "/" + (current_sign);
             textProgress.Text = current_sign + 1 + "/" + signs.Count();
 
-            if( current_sign+1 == signs.Count() )
+            if (current_sign + 1 == signs.Count())
             {
-                buttonNext.Text= "End";
+                buttonNext.Text = "End";
             }
         }
 
@@ -134,7 +138,7 @@ namespace WindowsFormsApplication1
             inputSign.Enabled = false;
             buttonValidate.Enabled = false;
 
-            if ( inputSign.Text.ToUpper() == textSignName.Text.ToUpper() )
+            if (inputSign.Text.ToUpper() == textSignName.Text.ToUpper())
             {
                 correct_answers++;
             }
@@ -142,7 +146,7 @@ namespace WindowsFormsApplication1
             if (current_sign + 1 == signs.Count())
             {
                 textScore.Text = correct_answers + "/" + signs.Count();
-                float score = ( (float)correct_answers / (float)signs.Count()) * 100;
+                float score = ((float)correct_answers / (float)signs.Count()) * 100;
                 textFinalScore.Text = Math.Round(score).ToString() + "%";
                 textFinalScore.Show();
             }
@@ -159,6 +163,7 @@ namespace WindowsFormsApplication1
 
             else
             {
+                report_score(id);
                 this.Close();
             }
         }
@@ -166,6 +171,31 @@ namespace WindowsFormsApplication1
         private void inputSign_TextChanged(object sender, EventArgs e)
         {
             buttonValidate.Enabled = true;
+        }
+
+        private void report_score(int id)
+        {
+            cmd.CommandType = CommandType.Text;
+
+            float score = ((float)correct_answers / (float)signs.Count()) * 100;
+
+            cmd.CommandText = "UPDATE Progress SET [Mark] = @Mark WHERE [IdExercice] = @IdExercice AND [IdLesson] = @IdLesson";
+            cmd.Parameters.AddWithValue("@Mark", Math.Round(Math.Round(score)));
+            cmd.Parameters.AddWithValue("@IdLesson", id);
+            cmd.Parameters.AddWithValue("@IdExercice", "2");
+
+            cmd.Connection = conn;
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

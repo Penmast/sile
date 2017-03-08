@@ -17,12 +17,19 @@ namespace WindowsFormsApplication1
         private List<sign> signs;
         private int current_sign;
         private float score;
+        private int id;
+
+        static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(connectionstring);
+        SqlCommand cmd = new SqlCommand();
+        SqlDataReader reader;
 
         public exerciceMemory(int id)
         {
             InitializeComponent();
-            
+
             current_sign = 0;
+            this.id = id;
             get_signs(id);
 
             /* shuffle signs */
@@ -42,6 +49,7 @@ namespace WindowsFormsApplication1
 
         private void buttonEnd_Click(object sender, EventArgs e)
         {
+            report_score(id);
             this.Close();
         }
 
@@ -54,12 +62,6 @@ namespace WindowsFormsApplication1
 
         private void get_signs(int id)
         {
-            string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
-            SqlConnection conn = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
-
-
             cmd.CommandText = "select * from signs where Id in ( select idSign from asso_Lessons_Sign where idLessons =" + id + ");";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
@@ -76,7 +78,7 @@ namespace WindowsFormsApplication1
 
                 try
                 {
-                    while (reader.Read() )
+                    while (reader.Read())
                     {
                         new_sign.id = (int)reader["Id"];
                         new_sign.name = (string)reader["name"];
@@ -125,7 +127,7 @@ namespace WindowsFormsApplication1
             textTitle.Text = signs[id_sign].name;
             imageSign.Image = null;
 
-            textProgress.Text = (current_sign+1) + "/" + signs.Count();
+            textProgress.Text = (current_sign + 1) + "/" + signs.Count();
         }
 
         private void buttonShow_Click(object sender, EventArgs e)
@@ -149,7 +151,7 @@ namespace WindowsFormsApplication1
         {
             Button button_pressed = sender as Button;
 
-            switch ( button_pressed.Name )
+            switch (button_pressed.Name)
             {
                 case "buttonEasy":
                     score += 3;
@@ -171,7 +173,7 @@ namespace WindowsFormsApplication1
             if (current_sign + 1 == signs.Count())
             {
                 score = score / (signs.Count() * 3);
-                textScore.Text = Math.Round((score*100)).ToString() + "%";
+                textScore.Text = Math.Round((score * 100)).ToString() + "%";
                 textScore.Show();
                 buttonEnd.Show();
             }
@@ -184,6 +186,29 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
+        private void report_score(int id)
+        {
+            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "UPDATE Progress SET [Mark] = @Mark WHERE [IdExercice] = @IdExercice AND [IdLesson] = @IdLesson";
+            cmd.Parameters.AddWithValue("@Mark", Math.Round(score * 100));
+            cmd.Parameters.AddWithValue("@IdLesson", id);
+            cmd.Parameters.AddWithValue("@IdExercice", "1");
+
+            cmd.Connection = conn;
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+
     }
 }
