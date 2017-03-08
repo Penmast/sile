@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
         private int id;
         private int difficulty;
 
+        private int correct_image;
+
         private List<PictureBox> images;
 
         static string connectionstring = (@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\sile_db.mdf;Integrated Security=True");
@@ -110,11 +112,13 @@ namespace WindowsFormsApplication1
 
         private void fill_page_new(int id_sign)
         {
+            images[correct_image].BorderStyle = BorderStyle.None;
+
             /* Fill random images */
-            List<sign> random_signs = take_random_signs(signs[id_sign]);
+            List <sign> random_signs = take_random_signs(signs[id_sign]);
 
             Random rnd = new Random();
-            int correct_image = rnd.Next(difficulty + 2);
+            correct_image = rnd.Next(difficulty + 2);
             images[correct_image].Image = signs[current_sign].image;
              
             int j = 0;
@@ -127,6 +131,7 @@ namespace WindowsFormsApplication1
                 }
             }
             /* */
+            
 
             textSignName.Text = signs[current_sign].name;
             textProgress.Text = current_sign + 1 + "/" + signs.Count();
@@ -177,6 +182,8 @@ namespace WindowsFormsApplication1
         {
             PictureBox pic_chosen = sender as PictureBox;
 
+            images[correct_image].BorderStyle = BorderStyle.FixedSingle;
+
             if ( pic_chosen.Image == signs[current_sign].image )
             {
                 score++;
@@ -186,6 +193,8 @@ namespace WindowsFormsApplication1
             if (current_sign + 1 == signs.Count())
             {
                 buttonNext.Text = "End";
+                textFinalScore.Text = Math.Round((score / signs.Count()) * 100) + "%";
+                textFinalScore.Show();
             }
 
             buttonNext.Show();
