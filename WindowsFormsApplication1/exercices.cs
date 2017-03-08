@@ -112,24 +112,34 @@ namespace WindowsFormsApplication1
 
             switch ( listExercices.SelectedIndex )
             {
-                case 0:
+                case 3:
                     exercice_mcq exercice_mcqForm = new exercice_mcq(idsLesson[listLessons.SelectedIndex]);
                     exercice_mcqForm.Show();
                     break;
 
-                case 1:
+                case 0:
                     exerciceMemory exerciceMemoryForm = new exerciceMemory(idsLesson[ listLessons.SelectedIndex ]);
                     exerciceMemoryForm.Show();
                     break;
 
-                case 2:
+                case 1:
                     exerciceInputSign exerciceInputSignForm = new exerciceInputSign(idsLesson[listLessons.SelectedIndex]);
                     exerciceInputSignForm.Show();
                     break;
 
-                case 3:
-                    exerciceImageMultipleChoices exerciceMultipleChoicesForm = new exerciceImageMultipleChoices(idsLesson[listLessons.SelectedIndex]);
+                case 5:
+                    exerciceImageMultipleChoices exerciceMultipleChoicesForm = new exerciceImageMultipleChoices(idsLesson[listLessons.SelectedIndex], 0);
                     exerciceMultipleChoicesForm.Show();
+                    break;
+
+                case 6:
+                    exerciceImageMultipleChoices exerciceMultipleChoicesForm2 = new exerciceImageMultipleChoices(idsLesson[listLessons.SelectedIndex], 1);
+                    exerciceMultipleChoicesForm2.Show();
+                    break;
+
+                case 7:
+                    exerciceImageMultipleChoices exerciceMultipleChoicesForm3 = new exerciceImageMultipleChoices(idsLesson[listLessons.SelectedIndex], 2);
+                    exerciceMultipleChoicesForm3.Show();
                     break;
             }
         }

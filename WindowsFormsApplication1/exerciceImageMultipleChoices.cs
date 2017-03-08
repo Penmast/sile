@@ -29,12 +29,12 @@ namespace WindowsFormsApplication1
         SqlCommand cmd = new SqlCommand();
         SqlDataReader reader;
 
-        public exerciceImageMultipleChoices(int id)
+        public exerciceImageMultipleChoices(int id, int difficulty)
         {
             InitializeComponent();
             get_signs(id);
 
-            difficulty = 2;
+            this.difficulty = difficulty;
             current_sign = 0;
 
             images = new List<PictureBox>();
@@ -213,6 +213,31 @@ namespace WindowsFormsApplication1
                 this.Close();
             }
 
+        }
+
+        private void report_score(int id)
+        {
+            cmd.CommandType = CommandType.Text;
+
+            int idex = 5 + difficulty;
+
+            cmd.CommandText = "UPDATE Progress SET [Mark] = @Mark WHERE [IdExercice] = @IdExercice AND [IdLesson] = @IdLesson";
+            cmd.Parameters.AddWithValue("@Mark", Math.Round(score * 100));
+            cmd.Parameters.AddWithValue("@IdLesson", id);
+            cmd.Parameters.AddWithValue("@IdExercice", idex);
+
+            cmd.Connection = conn;
+
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

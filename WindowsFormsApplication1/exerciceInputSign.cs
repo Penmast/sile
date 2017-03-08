@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1
             cmd.CommandText = "UPDATE Progress SET [Mark] = @Mark WHERE [IdExercice] = @IdExercice AND [IdLesson] = @IdLesson";
             cmd.Parameters.AddWithValue("@Mark", Math.Round(Math.Round(score)));
             cmd.Parameters.AddWithValue("@IdLesson", id);
-            cmd.Parameters.AddWithValue("@IdExercice", "2");
+            cmd.Parameters.AddWithValue("@IdExercice", "1");
 
             cmd.Connection = conn;
 
