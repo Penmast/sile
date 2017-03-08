@@ -16,8 +16,8 @@ namespace WindowsFormsApplication1
     {
         private List<sign> signs;
         private int current_sign;
-        private float score;
-        private string answer;
+        private int score;
+        private int answer;
 
         public exercice_mcq(int id)
         {
@@ -102,20 +102,100 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private List<int> randomPosition(int current_sign)
+        {
+            List<int> position = new List<int>();
+            Random rnd = new Random();
+            int answer_position = rnd.Next(0, 4);
+            answer = answer_position;
+            bool redo = true;
+            int num = 0;
+            for (int i = 0; i<5; i++)
+            {
+                if (i != answer_position)
+                {
+                    do
+                    {
+                        redo = true;
+                        num = rnd.Next(0, signs.Count());
+                        
+                        bool alreadyExist = position.Contains(num);
+                        if (!alreadyExist && num!=answer_position)
+                        {
+                            position.Add(num);
+                            redo = false;
+                        }
+                    } while (redo);
+                }
+                else
+                {
+                    position.Add(current_sign);
+                }
+                Console.WriteLine(i);
+            }
+            position.OrderBy(item => rnd.Next());
+            return position;
+        }
+
         private void showExercice()
         {
             pictureBox.Image = signs[current_sign].image;
-            radioButton_choice1.Text = signs[current_sign].name;
-            radioButton_choice2.Text = signs[current_sign].name;
-            radioButton_choice3.Text = signs[current_sign].name;
+            List<int> list = randomPosition(current_sign);
+            radioButton_choice1.Text = signs[list[0]].name;
+            radioButton_choice2.Text = signs[list[1]].name;
+            radioButton_choice3.Text = signs[list[2]].name;
+            radioButton_choice4.Text = signs[list[3]].name;
+            radioButton_choice5.Text = signs[list[4]].name;
+            
         }
 
-
-
-        private void add_to_score(object sender, EventArgs e)
+        private int getCheckRadioButton()
         {
-            Button button_pressed = sender as Button;
+            int i = 0;
+            if (radioButton_choice1.Checked)
+            {
+                i = 0;
+            }
+            if (radioButton_choice2.Checked)
+            {
+                i = 1;
+            }
+            if (radioButton_choice3.Checked)
+            {
+                i = 2;
+            }
+            if (radioButton_choice4.Checked)
+            {
+                i = 3;
+            }
+            if (radioButton_choice5.Checked)
+            {
+                i = 4;
+            }
+            return i;
+        }
 
+        private void add_to_score()
+        {
+            if (answer == getCheckRadioButton() )
+            {
+                score++;
+            }
+            score_text.Text = score.ToString();
+
+        }
+
+        private void button_next_Click(object sender, EventArgs e)
+        {
+            if (current_sign+1<signs.Count())
+            {
+                add_to_score();
+                current_sign++;
+                showExercice();
+            } else
+            {
+
+            }
 
         }
 
