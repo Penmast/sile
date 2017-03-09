@@ -18,11 +18,12 @@ namespace WindowsFormsApplication1
         private int current_sign;
         private int score;
         private int answer;
+        private int num_possible_answer;
 
-        public exercice_mcq(int id)
+        public exercice_mcq(int id, int num_possible_answer)
         {
             InitializeComponent();
-
+            this.num_possible_answer = num_possible_answer;
             current_sign = 0;
             get_signs(id);
 
@@ -102,7 +103,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private List<int> randomPosition(int current_sign)
+        private List<int> randomPosition(int current_sign, int num_possible_answer)
         {
             List<int> position = new List<int>();
             Random rnd = new Random();
@@ -110,7 +111,7 @@ namespace WindowsFormsApplication1
             answer = answer_position;
             bool redo = true;
             int num = 0;
-            for (int i = 0; i<5; i++)
+            for (int i = 0; i< num_possible_answer; i++)
             {
                 if (i != answer_position)
                 {
@@ -140,13 +141,32 @@ namespace WindowsFormsApplication1
         private void showExercice()
         {
             pictureBox.Image = signs[current_sign].image;
-            List<int> list = randomPosition(current_sign);
-            radioButton_choice1.Text = signs[list[0]].name;
-            radioButton_choice2.Text = signs[list[1]].name;
-            radioButton_choice3.Text = signs[list[2]].name;
-            radioButton_choice4.Text = signs[list[3]].name;
-            radioButton_choice5.Text = signs[list[4]].name;
-            
+            List<int> list = randomPosition(current_sign, num_possible_answer);
+            switch (list.Count())
+            {
+                case 3:
+                    radioButton_choice1.Text = signs[list[0]].name;
+                    radioButton_choice2.Text = signs[list[1]].name;
+                    radioButton_choice3.Text = signs[list[2]].name;
+                    radioButton_choice4.Hide();
+                    radioButton_choice5.Hide();
+                    break;
+                case 4:
+                    radioButton_choice1.Text = signs[list[0]].name;
+                    radioButton_choice2.Text = signs[list[1]].name;
+                    radioButton_choice3.Text = signs[list[2]].name;
+                    radioButton_choice4.Text = signs[list[3]].name;
+                    radioButton_choice5.Hide();
+                    break;
+                case 5:
+                    radioButton_choice1.Text = signs[list[0]].name;
+                    radioButton_choice2.Text = signs[list[1]].name;
+                    radioButton_choice3.Text = signs[list[2]].name;
+                    radioButton_choice4.Text = signs[list[3]].name;
+                    radioButton_choice5.Text = signs[list[4]].name;
+                    break;
+
+            }            
         }
 
         private int getCheckRadioButton()
@@ -194,7 +214,8 @@ namespace WindowsFormsApplication1
                 showExercice();
             } else
             {
-
+                exerciceRecap exerciseRecapForm = new exerciceRecap(score, signs.Count());
+                exerciseRecapForm.Show();
             }
 
         }

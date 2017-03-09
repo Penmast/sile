@@ -12,12 +12,29 @@ namespace WindowsFormsApplication1
 {
     public partial class exerciceRecap : Form
     {
+        private int score;
+        private int number_question;
+
         public exerciceRecap()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public exerciceRecap(int score, int v)
+        {
+            this.score = score;
+            this.number_question = v;
+
+            score_pts.Text = this.score.ToString();
+            percent_score.Text = (score/number_question).ToString();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void percent_score_Click(object sender, EventArgs e)
         {
 
         }

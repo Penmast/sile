@@ -46,7 +46,16 @@ namespace WindowsFormsApplication1
                         string name = (string)reader["name"];
                         listExercices.Items.Add(name);
                         idsExercice.Add((int)reader["Id"]);
+                        
                     }
+                    Console.WriteLine(idsExercice[0]);
+                    Console.WriteLine(idsExercice[1]);
+                    Console.WriteLine(idsExercice[2]);
+                    Console.WriteLine(idsExercice[3]);
+                    Console.WriteLine(idsExercice[4]);
+                    Console.WriteLine(idsExercice[5]);
+                    Console.WriteLine(idsExercice[6]);
+                    Console.WriteLine(idsExercice[7]);
                 }
                 catch (InvalidOperationException ed)
                 {
@@ -114,10 +123,7 @@ namespace WindowsFormsApplication1
 
             switch ( listExercices.SelectedIndex )
             {
-                case 3:
-                    exercice_mcq exercice_mcqForm = new exercice_mcq(idsLesson[listLessons.SelectedIndex]);
-                    exercice_mcqForm.Show();
-                    break;
+                
 
                 case 0:
                     exerciceMemory exerciceMemoryForm = new exerciceMemory(idsLesson[ listLessons.SelectedIndex ]);
@@ -127,6 +133,19 @@ namespace WindowsFormsApplication1
                 case 1:
                     exerciceInputSign exerciceInputSignForm = new exerciceInputSign(idsLesson[listLessons.SelectedIndex]);
                     exerciceInputSignForm.Show();
+                    break;
+
+                case 2:
+                    exercice_mcq exercice_mcqForm3 = new exercice_mcq(idsLesson[listLessons.SelectedIndex], 3);
+                    exercice_mcqForm3.Show();
+                    break;
+                case 3:
+                    exercice_mcq exercice_mcqForm4 = new exercice_mcq(idsLesson[listLessons.SelectedIndex], 4);
+                    exercice_mcqForm4.Show();
+                    break;
+                case 4:
+                    exercice_mcq exercice_mcqForm5 = new exercice_mcq(idsLesson[listLessons.SelectedIndex], 5);
+                    exercice_mcqForm5.Show();
                     break;
 
                 case 5:
