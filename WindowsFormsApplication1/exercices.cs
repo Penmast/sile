@@ -48,14 +48,6 @@ namespace WindowsFormsApplication1
                         idsExercice.Add((int)reader["Id"]);
                         
                     }
-                    Console.WriteLine(idsExercice[0]);
-                    Console.WriteLine(idsExercice[1]);
-                    Console.WriteLine(idsExercice[2]);
-                    Console.WriteLine(idsExercice[3]);
-                    Console.WriteLine(idsExercice[4]);
-                    Console.WriteLine(idsExercice[5]);
-                    Console.WriteLine(idsExercice[6]);
-                    Console.WriteLine(idsExercice[7]);
                 }
                 catch (InvalidOperationException ed)
                 {
