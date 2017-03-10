@@ -20,6 +20,8 @@ namespace WindowsFormsApplication1
         private int id;
         private int difficulty;
 
+        private Boolean next;
+
         private int correct_image;
 
         private List<PictureBox> images;
@@ -133,8 +135,8 @@ namespace WindowsFormsApplication1
                 }
             }
             /* */
-            
 
+            next = false;
             textSignName.Text = signs[current_sign].name;
             textProgress.Text = current_sign + 1 + "/" + signs.Count();
             textCorrectAnswers.Text = score + "/" + current_sign;
@@ -182,24 +184,32 @@ namespace WindowsFormsApplication1
 
         private void check_answer(object sender, EventArgs e)
         {
-            PictureBox pic_chosen = sender as PictureBox;
-
-            images[correct_image].BorderStyle = BorderStyle.FixedSingle;
-
-            if ( pic_chosen.Image == signs[current_sign].image )
+            if (!next)
             {
-                score++;
+
+                PictureBox pic_chosen = sender as PictureBox;
+
+                next = true;
+
+                images[correct_image].BorderStyle = BorderStyle.FixedSingle;
+
+                if (pic_chosen.Image == signs[current_sign].image)
+                {
+                    score++;
+                }
+
+
+                if (current_sign + 1 == signs.Count())
+                {
+                    buttonNext.Text = "End";
+                    textCorrectAnswers.Text = score + "/" + (current_sign+1);
+                    textFinalScore.Text = Math.Round((score / signs.Count()) * 100) + "%";
+                    textFinalScore.Show();
+                }
+
+                buttonNext.Show();
+
             }
-
-
-            if (current_sign + 1 == signs.Count())
-            {
-                buttonNext.Text = "End";
-                textFinalScore.Text = Math.Round((score / signs.Count()) * 100) + "%";
-                textFinalScore.Show();
-            }
-
-            buttonNext.Show();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
