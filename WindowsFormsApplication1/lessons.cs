@@ -127,5 +127,15 @@ namespace WindowsFormsApplication1
             lessonMenu lessonmenuform = new lessonMenu( ids[ listBox1.SelectedIndex ] );
             lessonmenuform.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

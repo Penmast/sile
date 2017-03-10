@@ -238,5 +238,10 @@ namespace WindowsFormsApplication1
                 signForm.Show();
             }
         }
+
+        private void imagename1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

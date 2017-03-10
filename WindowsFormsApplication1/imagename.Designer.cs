@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(imagename));
             this.picture = new System.Windows.Forms.PictureBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.image = new System.Windows.Forms.ImageList(this.components);
@@ -40,20 +41,27 @@ namespace WindowsFormsApplication1
             // 
             // picture
             // 
-            this.picture.Location = new System.Drawing.Point(3, 3);
+            this.picture.BackColor = System.Drawing.Color.White;
+            this.picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picture.Location = new System.Drawing.Point(19, 23);
+            this.picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(214, 186);
+            this.picture.Size = new System.Drawing.Size(184, 170);
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
+            this.picture.UseWaitCursor = true;
+            this.picture.Click += new System.EventHandler(this.onClick);
             // 
             // titleLabel
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(69, 196);
+            this.titleLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.titleLabel.Image = ((System.Drawing.Image)(resources.GetObject("titleLabel.Image")));
+            this.titleLabel.Location = new System.Drawing.Point(36, 196);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(0, 13);
+            this.titleLabel.Size = new System.Drawing.Size(149, 13);
             this.titleLabel.TabIndex = 1;
-            this.picture.Click += new System.EventHandler(this.onClick);
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // image
             // 
@@ -63,16 +71,18 @@ namespace WindowsFormsApplication1
             // 
             // imagename
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.picture);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "imagename";
-            this.Size = new System.Drawing.Size(220, 231);
-
+            this.Size = new System.Drawing.Size(229, 237);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
