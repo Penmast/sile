@@ -32,7 +32,6 @@ namespace HandGestureRecognition
         static void Main(string[] args)
         {
             //new HandRecognitionPicture("aa");
-            new HandRecognitionVideo(@".\..\..\..\testd.MPG");
         }
 
         

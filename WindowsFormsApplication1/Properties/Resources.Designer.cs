@@ -73,6 +73,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abcd {
+            get {
+                object obj = ResourceManager.GetObject("abcd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Au_revoir {
             get {
                 object obj = ResourceManager.GetObject("Au_revoir", resourceCulture);

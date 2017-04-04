@@ -49,6 +49,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Emgu.CV, Version=2.2.0.822, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>emgu_dlls\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>emgu_dlls\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL">
+      <HintPath>.\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>.\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.2.0.822, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>emgu_dlls\Emgu.Util.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -95,6 +112,8 @@
     <Compile Include="exercice_mcq.Designer.cs">
       <DependentUpon>exercice_mcq.cs</DependentUpon>
     </Compile>
+    <Compile Include="HandRecognitionPicture.cs" />
+    <Compile Include="HandRecognitionVideo.cs" />
     <Compile Include="imagename.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -265,6 +284,8 @@
     <None Include="Resources\Neuf.jpg" />
     <None Include="Resources\Dix.jpg" />
     <None Include="Resources\Deux.jpg" />
+    <None Include="Resources\abcd.jpg" />
+    <Content Include="cvextern.dll" />
     <Content Include="sile_db.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -287,6 +308,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="HandGestureRecognitionPicture\HandGestureRecognition.SkinDetector\HandGestureRecognition.SkinDetector.csproj">
+      <Project>{8b522b5d-7afe-47b7-90bc-c9203374ea6d}</Project>
+      <Name>HandGestureRecognition.SkinDetector</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
