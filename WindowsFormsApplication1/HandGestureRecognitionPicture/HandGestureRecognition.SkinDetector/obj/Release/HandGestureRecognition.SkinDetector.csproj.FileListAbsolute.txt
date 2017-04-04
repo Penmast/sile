@@ -1,0 +1,6 @@
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\bin\Release\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\bin\Release\HandGestureRecognition.SkinDetector.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\bin\Release\Emgu.CV.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\bin\Release\Emgu.Util.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\obj\Release\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition.SkinDetector\obj\Release\HandGestureRecognition.SkinDetector.pdb

@@ -1,0 +1,43 @@
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\cvextern.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe.config
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\Emgu.CV.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\Emgu.CV.UI.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\Emgu.Util.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.Form1.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csproj.GenerateResource.Cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe.config
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\cvextern.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\Emgu.CV.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\Emgu.CV.UI.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\Emgu.Util.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csproj.GenerateResource.Cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe.config
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\cvextern.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\Emgu.CV.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\Emgu.CV.UI.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\Emgu.Util.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\bin\Debug\HandGestureRecognition.SkinDetector.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\obj\x86\Debug\HandGestureRecognition.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognitionPicture\HandGestureRecognition\obj\x86\Debug\HandGestureRecognitionPicture.csproj.GenerateResource.Cache

@@ -1,0 +1,15 @@
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\HandGestureRecognition.exe.config
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\cvextern.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\HandGestureRecognition.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\Emgu.CV.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\Emgu.CV.UI.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\Emgu.Util.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\HandGestureRecognition.SkinDetector.dll
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\bin\Release\HandGestureRecognition.SkinDetector.pdb
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognitionPicture.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognition.Form1.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognition.Properties.Resources.resources
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognitionPicture.csproj.GenerateResource.Cache
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognition.exe
+C:\Users\David\Documents\Visual Studio 2015\Projects\HandGestureRecognition - Copy (2)\HandGestureRecognition\obj\Release\HandGestureRecognition.pdb

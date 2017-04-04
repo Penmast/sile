@@ -43,6 +43,7 @@
             this.imagename4 = new WindowsFormsApplication1.imagename();
             this.imagename2 = new WindowsFormsApplication1.imagename();
             this.imagename3 = new WindowsFormsApplication1.imagename();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,24 +226,35 @@
             this.imagename3.title = "";
             this.imagename3.clicked += new System.EventHandler(this.imagename_clicked);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(430, 708);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Copyright 2017\r\n";
+            // 
             // lessonMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.imagename6);
-            this.Controls.Add(this.imagename5);
-            this.Controls.Add(this.imagename1);
             this.Controls.Add(this.imagename4);
+            this.Controls.Add(this.imagename6);
             this.Controls.Add(this.imagename2);
+            this.Controls.Add(this.imagename1);
             this.Controls.Add(this.imagename3);
+            this.Controls.Add(this.imagename5);
             this.Controls.Add(this.shapeContainer1);
             this.Name = "lessonMenu";
             this.Text = "Form1";
@@ -268,5 +280,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
