@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap aujourd_hui {
             get {
-                object obj = ResourceManager.GetObject("aujourd_hui", resourceCulture);
+                object obj = ResourceManager.GetObject("aujourd\'hui", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -69,8 +69,10 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -286,6 +288,17 @@
     <None Include="Resources\Deux.jpg" />
     <None Include="Resources\abcd.jpg" />
     <Content Include="cvextern.dll" />
+    <None Include="Resources\17760627_10212623219959965_250196404_n.jpg" />
+    <None Include="Resources\17820960_10212623220239972_1357529393_n.jpg" />
+    <None Include="Resources\17792283_10212623220279973_1955668869_n.jpg" />
+    <None Include="Resources\17792344_10212623220159970_820254499_n.jpg" />
+    <None Include="Resources\17793219_10212623220079968_935565358_n.jpg" />
+    <None Include="Resources\17806752_10212623220399976_436360809_n.gif.jpg" />
+    <None Include="Resources\17807101_10212623219919964_66598603_n.jpg" />
+    <None Include="Resources\17813756_10212623220119969_850375608_n.jpg" />
+    <None Include="Resources\17813845_10212623220039967_1104242820_n.jpg" />
+    <None Include="Resources\17814039_10212623219999966_1114813627_n.jpg" />
+    <None Include="Resources\17814101_10212623220199971_1720025365_n.jpg" />
     <Content Include="sile_db.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

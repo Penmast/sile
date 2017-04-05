@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(exerciceMenu));
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonPrevious = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
@@ -71,7 +72,11 @@
             // 
             // imagename6
             // 
+            this.imagename6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename6.BackgroundImage")));
+            this.imagename6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.imagename6.Location = new System.Drawing.Point(593, 291);
+            this.imagename6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename6.Name = "imagename6";
             this.imagename6.pic = null;
             this.imagename6.Size = new System.Drawing.Size(220, 231);
@@ -80,7 +85,11 @@
             // 
             // imagename5
             // 
+            this.imagename5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename5.BackgroundImage")));
+            this.imagename5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename5.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.imagename5.Location = new System.Drawing.Point(367, 291);
+            this.imagename5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename5.Name = "imagename5";
             this.imagename5.pic = null;
             this.imagename5.Size = new System.Drawing.Size(220, 231);
@@ -89,7 +98,11 @@
             // 
             // imagename4
             // 
+            this.imagename4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename4.BackgroundImage")));
+            this.imagename4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.imagename4.Location = new System.Drawing.Point(77, 291);
+            this.imagename4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename4.Name = "imagename4";
             this.imagename4.pic = null;
             this.imagename4.Size = new System.Drawing.Size(220, 231);
@@ -98,7 +111,11 @@
             // 
             // imagename3
             // 
+            this.imagename3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename3.BackgroundImage")));
+            this.imagename3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.imagename3.Location = new System.Drawing.Point(593, 54);
+            this.imagename3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename3.Name = "imagename3";
             this.imagename3.pic = null;
             this.imagename3.Size = new System.Drawing.Size(220, 231);
@@ -107,7 +124,11 @@
             // 
             // imagename2
             // 
-            this.imagename2.Location = new System.Drawing.Point(367, 54);
+            this.imagename2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename2.BackgroundImage")));
+            this.imagename2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.imagename2.Location = new System.Drawing.Point(365, 54);
+            this.imagename2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename2.Name = "imagename2";
             this.imagename2.pic = null;
             this.imagename2.Size = new System.Drawing.Size(220, 231);
@@ -116,14 +137,18 @@
             // 
             // imagename1
             // 
+            this.imagename1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename1.BackgroundImage")));
+            this.imagename1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imagename1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.imagename1.Location = new System.Drawing.Point(77, 54);
+            this.imagename1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename1.Name = "imagename1";
             this.imagename1.pic = null;
             this.imagename1.Size = new System.Drawing.Size(220, 231);
             this.imagename1.TabIndex = 0;
             this.imagename1.title = "";
             // 
-            // lessonMenu
+            // exerciceMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +162,7 @@
             this.Controls.Add(this.imagename3);
             this.Controls.Add(this.imagename2);
             this.Controls.Add(this.imagename1);
-            this.Name = "lessonMenu";
+            this.Name = "exerciceMenu";
             this.Text = "Form1";
             this.ResumeLayout(false);
 

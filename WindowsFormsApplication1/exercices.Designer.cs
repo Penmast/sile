@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listExercices = new System.Windows.Forms.ListBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,8 +47,8 @@
             // buttonOk
             // 
             this.buttonOk.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonOk.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonOk.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonOk.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonOk.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOk.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOk.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -63,8 +63,8 @@
             // buttonBack
             // 
             this.buttonBack.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBack.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -80,26 +80,26 @@
             // 
             this.descriptionBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.descriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.descriptionBox.Font = new System.Drawing.Font("Ubuntu Light", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionBox.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.descriptionBox.Location = new System.Drawing.Point(444, 228);
+            this.descriptionBox.Location = new System.Drawing.Point(520, 228);
             this.descriptionBox.Multiline = true;
             this.descriptionBox.Name = "descriptionBox";
             this.descriptionBox.ReadOnly = true;
-            this.descriptionBox.Size = new System.Drawing.Size(421, 299);
+            this.descriptionBox.Size = new System.Drawing.Size(421, 277);
             this.descriptionBox.TabIndex = 4;
             // 
             // listLessons
             // 
             this.listLessons.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.listLessons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listLessons.Font = new System.Drawing.Font("Ubuntu Light", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listLessons.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listLessons.FormattingEnabled = true;
-            this.listLessons.ItemHeight = 27;
+            this.listLessons.ItemHeight = 25;
             this.listLessons.Location = new System.Drawing.Point(12, 228);
             this.listLessons.Name = "listLessons";
-            this.listLessons.Size = new System.Drawing.Size(130, 299);
+            this.listLessons.Size = new System.Drawing.Size(130, 277);
             this.listLessons.TabIndex = 3;
             this.listLessons.SelectedIndexChanged += new System.EventHandler(this.listLessons_SelectedIndexChanged);
             // 
@@ -118,13 +118,13 @@
             // 
             this.listExercices.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.listExercices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listExercices.Font = new System.Drawing.Font("Ubuntu Light", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listExercices.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listExercices.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listExercices.FormattingEnabled = true;
-            this.listExercices.ItemHeight = 27;
+            this.listExercices.ItemHeight = 25;
             this.listExercices.Location = new System.Drawing.Point(164, 228);
             this.listExercices.Name = "listExercices";
-            this.listExercices.Size = new System.Drawing.Size(238, 299);
+            this.listExercices.Size = new System.Drawing.Size(238, 277);
             this.listExercices.TabIndex = 6;
             this.listExercices.SelectedIndexChanged += new System.EventHandler(this.listExercices_SelectedIndexChanged);
             // 
@@ -141,14 +141,12 @@
             this.shapeContainer1.TabIndex = 7;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape1
+            // rectangleShape1
             // 
-            this.lineShape1.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = -3;
-            this.lineShape1.X2 = 892;
-            this.lineShape1.Y1 = 132;
-            this.lineShape1.Y2 = 132;
+            this.rectangleShape1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rectangleShape1.BackgroundImage")));
+            this.rectangleShape1.Location = new System.Drawing.Point(1, 132);
+            this.rectangleShape1.Name = "rectangleShape1";
+            this.rectangleShape1.Size = new System.Drawing.Size(1009, 554);
             // 
             // lineShape2
             // 
@@ -158,12 +156,14 @@
             this.lineShape2.Y1 = 447;
             this.lineShape2.Y2 = 447;
             // 
-            // rectangleShape1
+            // lineShape1
             // 
-            this.rectangleShape1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rectangleShape1.BackgroundImage")));
-            this.rectangleShape1.Location = new System.Drawing.Point(1, 132);
-            this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(1009, 554);
+            this.lineShape1.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = -3;
+            this.lineShape1.X2 = 892;
+            this.lineShape1.Y1 = 132;
+            this.lineShape1.Y2 = 132;
             // 
             // label2
             // 
@@ -200,6 +200,7 @@
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.shapeContainer1);
+            this.MaximizeBox = false;
             this.Name = "exercices";
             this.Text = "SignLearning";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

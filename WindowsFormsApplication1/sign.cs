@@ -119,6 +119,9 @@ namespace WindowsFormsApplication1
             if (id_in_lesson+1 == max_lesson) button_next.Enabled = false;
         }
 
-      
+        private void title_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

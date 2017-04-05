@@ -48,8 +48,8 @@
             this.buttonLessons.BackColor = System.Drawing.SystemColors.Control;
             this.buttonLessons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonLessons.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonLessons.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonLessons.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonLessons.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonLessons.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonLessons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLessons.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLessons.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -80,8 +80,8 @@
             this.buttonExercices.BackColor = System.Drawing.SystemColors.Control;
             this.buttonExercices.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
             this.buttonExercices.FlatAppearance.BorderSize = 2;
-            this.buttonExercices.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonExercices.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonExercices.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonExercices.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonExercices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExercices.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExercices.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -97,8 +97,8 @@
             // 
             this.buttonQuit.BackColor = System.Drawing.SystemColors.Control;
             this.buttonQuit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.buttonQuit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonQuit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonQuit.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonQuit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonQuit.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuit.ForeColor = System.Drawing.SystemColors.HotTrack;

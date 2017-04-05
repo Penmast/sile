@@ -252,5 +252,15 @@ namespace WindowsFormsApplication1
                 MessageBox.Show(e.Message);
             }
         }
+
+        private void textProgress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCorrectAnswers_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

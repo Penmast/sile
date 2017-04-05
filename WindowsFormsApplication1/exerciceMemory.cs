@@ -209,6 +209,9 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void textAsk_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

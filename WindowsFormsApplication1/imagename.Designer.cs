@@ -43,13 +43,13 @@ namespace WindowsFormsApplication1
             // 
             this.picture.BackColor = System.Drawing.Color.White;
             this.picture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picture.Cursor = System.Windows.Forms.Cursors.Default;
             this.picture.Location = new System.Drawing.Point(19, 23);
             this.picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(184, 170);
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
-            this.picture.UseWaitCursor = true;
             this.picture.Click += new System.EventHandler(this.onClick);
             // 
             // titleLabel
@@ -78,6 +78,7 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.picture);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Location = new System.Drawing.Point(217, 150);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "imagename";
             this.Size = new System.Drawing.Size(229, 237);

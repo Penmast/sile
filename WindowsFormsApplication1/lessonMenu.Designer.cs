@@ -50,8 +50,8 @@
             // buttonBack
             // 
             this.buttonBack.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Desktop;
-            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBack.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -66,6 +66,8 @@
             // buttonPrevious
             // 
             this.buttonPrevious.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonPrevious.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonPrevious.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrevious.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrevious.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -80,6 +82,8 @@
             // buttonNext
             // 
             this.buttonNext.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonNext.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonNext.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNext.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonNext.ForeColor = System.Drawing.SystemColors.HotTrack;
@@ -132,12 +136,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ubuntu Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(12, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(246, 22);
+            this.label2.Size = new System.Drawing.Size(261, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "Select the sign you want to lurn\r\n";
             // 
@@ -160,7 +164,7 @@
             this.imagename5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename5.BackgroundImage")));
             this.imagename5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imagename5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.imagename5.Location = new System.Drawing.Point(351, 408);
+            this.imagename5.Location = new System.Drawing.Point(329, 399);
             this.imagename5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename5.Name = "imagename5";
             this.imagename5.pic = null;
@@ -174,7 +178,7 @@
             this.imagename1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename1.BackgroundImage")));
             this.imagename1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imagename1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.imagename1.Location = new System.Drawing.Point(13, 182);
+            this.imagename1.Location = new System.Drawing.Point(16, 182);
             this.imagename1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename1.Name = "imagename1";
             this.imagename1.pic = null;
@@ -201,9 +205,10 @@
             // imagename2
             // 
             this.imagename2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imagename2.BackgroundImage")));
+            this.imagename2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.imagename2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imagename2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.imagename2.Location = new System.Drawing.Point(351, 182);
+            this.imagename2.Location = new System.Drawing.Point(329, 182);
             this.imagename2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imagename2.Name = "imagename2";
             this.imagename2.pic = null;
@@ -249,13 +254,14 @@
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrevious);
             this.Controls.Add(this.buttonBack);
+            this.Controls.Add(this.imagename3);
+            this.Controls.Add(this.imagename1);
+            this.Controls.Add(this.imagename2);
+            this.Controls.Add(this.imagename5);
             this.Controls.Add(this.imagename4);
             this.Controls.Add(this.imagename6);
-            this.Controls.Add(this.imagename2);
-            this.Controls.Add(this.imagename1);
-            this.Controls.Add(this.imagename3);
-            this.Controls.Add(this.imagename5);
             this.Controls.Add(this.shapeContainer1);
+            this.MaximizeBox = false;
             this.Name = "lessonMenu";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
